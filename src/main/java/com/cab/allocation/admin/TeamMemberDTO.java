@@ -5,6 +5,15 @@ public class TeamMemberDTO {
 	private String teamMemberId;
 	private Gender gender;
 	private String dropPoint;
+	private boolean isAllocated;
+	
+	public boolean isAllocated() {
+		return isAllocated;
+	}
+
+	public void setAllocated(boolean isAllocated) {
+		this.isAllocated = isAllocated;
+	}
 
 	public String getId() {
 		return id;
@@ -37,6 +46,14 @@ public class TeamMemberDTO {
 	public void setDropPoint(String dropPoint) {
 		this.dropPoint = dropPoint;
 	}
+
+	@Override
+	public String toString() {
+		return "TeamMemberDTO [id=" + teamMemberId + ", gender=" + gender + ", drop=" + dropPoint
+				+ ", done=" + isAllocated + "]";
+	}
+
+
 
 }
 

@@ -3,6 +3,7 @@ package com.cab.allocation.admin.model;
 import javax.validation.constraints.NotNull;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -19,6 +20,17 @@ public class Cab {
 	@NotNull
 	private Integer capacity;
 	
+	@Transient
+	private Integer allocatedUsers=0;
+	
+	public Integer getAllocatedUsers() {
+		return allocatedUsers;
+	}
+
+	public void setAllocatedUsers(Integer allocatedUsers) {
+		this.allocatedUsers = allocatedUsers;
+	}
+
 	public Cab() {
 	}
 	
