@@ -30,7 +30,7 @@ public class CabService {
 		cabs.getCabs().stream().forEach(cab -> {
 			cabsRepository.save(cab);
 		});
-
+		
 		return findAll();
 
 	}
